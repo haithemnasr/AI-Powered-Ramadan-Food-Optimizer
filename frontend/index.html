@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1a1f2e">
+    <meta name="description" content="B9itlek - مساعد ذكي لتقليل هدر الطعام في رمضان">
+    <title>B9atlek – بقاتلك؟</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="icon-192.png">
+</head>
+<body dir="rtl">
+    <!-- Falling stars container -->
+    <div class="stars-container" id="starsContainer"></div>
+
+    <!-- Ramadan decorative elements -->
+    <div class="ramadan-decor moon">🌙</div>
+    <div class="ramadan-decor lantern-left">🏮</div>
+    <div class="ramadan-decor lantern-right">🏮</div>
+    <div class="ramadan-decor star-1">⭐</div>
+    <div class="ramadan-decor star-2">✨</div>
+    <div class="ramadan-decor mosque">🕌</div>
+
+    <div class="container">
+        <h1>B9atlek – بقاتلك؟</h1>
+        <p>اكتب شنو حضرت أمس و شنو بقا من الماكلة</p>
+
+        <div class="input-group">
+            <textarea id="today" placeholder="شنو حضّرت أمس ؟ (مثال: كسكسي، شوربة، بريك)"></textarea>
+            <button class="voice-btn" id="voiceToday" title="تكلم بالصوت">🎤</button>
+        </div>
+        
+        <div class="input-group">
+            <textarea id="leftovers" placeholder="شنو بقا؟ (مثال: صحن كسكسي، دجاج، خبز، رز)"></textarea>
+            <button class="voice-btn" id="voiceLeftovers" title="تكلم بالصوت">🎤</button>
+        </div>
+
+        <button id="optBtn">شنو نعملو بيهم؟ 🍽️</button>
+        
+        <!-- Stats Dashboard Section -->
+        <div class="stats-section">
+            <h2>📊 إحصائياتك</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">♻️</div>
+                    <div class="stat-value" id="savedKg">0 كغ</div>
+                    <div class="stat-label">ماكلة تم إنقاذها</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">📝</div>
+                    <div class="stat-value" id="totalSuggestions">0</div>
+                    <div class="stat-label">اقتراحات مستلمة</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🌱</div>
+                    <div class="stat-value" id="co2Saved">0 كغ</div>
+                    <div class="stat-label">CO₂ تم توفيره</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">💰</div>
+                    <div class="stat-value" id="moneySaved">0 د.ت</div>
+                    <div class="stat-label">مبلغ موفر</div>
+                </div>
+            </div>
+        </div>
+
+        <h2>اقتراحات B9itlek</h2>
+        <div id="result"></div>
+        
+        <!-- Ramadan Calendar Section with Visual Calendar -->
+        <div class="calendar-section">
+            <h2>📅 تقويم رمضان</h2>
+            <div class="calendar-info">
+                <div class="today-info">
+                    <span class="day-number" id="ramadanDay">يوم 1</span>
+                    <span class="day-label" id="ramadanLabel">من رمضان المبارك</span>
+                </div>
+                
+                <!-- Calendrier Visuel -->
+                <div class="calendar-visual" id="calendarVisual">
+                    <!-- En-têtes des jours -->
+                    <div class="calendar-grid">
+                        <div class="calendar-day-header">الأحد</div>
+                        <div class="calendar-day-header">الاثنين</div>
+                        <div class="calendar-day-header">الثلاثاء</div>
+                        <div class="calendar-day-header">الأربعاء</div>
+                        <div class="calendar-day-header">الخميس</div>
+                        <div class="calendar-day-header">الجمعة</div>
+                        <div class="calendar-day-header">السبت</div>
+                    </div>
+                    
+                    <!-- Grille des jours (généré par JS) -->
+                    <div class="calendar-grid" id="calendarGrid"></div>
+                    
+                    <!-- Info décade -->
+                    <div class="decade-info" id="decadeInfo" style="display: none;">
+                        <div class="decade-title">✨ العشر الأوائل</div>
+                        <div class="decade-desc">أيام الرحمة والبركة</div>
+                    </div>
+                    
+                    <!-- Légende -->
+                    <div class="calendar-legend">
+                        <div class="legend-item">
+                            <div class="legend-box today"></div>
+                            <span>اليوم</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-box passed"></div>
+                            <span>مضى</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-box upcoming"></div>
+                            <span>قادم</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="meal-plan">
+                    <h3>🍽️ خطة الإفطار اليوم</h3>
+                    <div id="todayMeal">اضغط على "شنو نعملو بيهم؟" للحصول على اقتراحات</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <!-- PWA Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(reg => console.log('Service Worker registered'))
+                    .catch(err => console.log('Service Worker registration failed'));
+            });
+        }
+    </script>
+</body>
+</html>
