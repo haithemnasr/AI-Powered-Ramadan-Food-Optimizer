@@ -43,7 +43,7 @@ AI-Powered-Ramadan-Food-Optimizer/
 │   ├── ICONS_README.md       # How to create/generate PWA icons
 │
 ├── .gitignore
-└── README.md                 # ← You are here
+└── README.md                
 ```
 
 ---
