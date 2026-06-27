@@ -153,7 +153,6 @@ This required ~15 prompt iterations to stabilize. See [`backend/ai.py`](backend/
 
 - [`documentation/FEATURES_README.md`](documentation/FEATURES_README.md) — Full feature guide + jury demo script
 - [`documentation/ICONS_README.md`](documentation/ICONS_README.md) — How to generate PWA icons
-- [`documentation/Rapport_finale_B9atlek.pdf`](documentation/Rapport_finale_B9atlek.pdf) — Full academic report (26 pages, French)
 - [`backend/README.md`](backend/README.md) — Detailed backend setup and troubleshooting
 
 ---
