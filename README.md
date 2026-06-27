@@ -178,8 +178,7 @@ This required ~15 prompt iterations to stabilize. See [`backend/ai.py`](backend/
 
 ## 👤 Author
 
-**Nasr Haithem** — GTE-1.1, École Nationale d'Ingénieurs de Sousse (ENISo)
-Supervised by: Mme Imen MEZGHENI & Mme Abir MHENNI
+**Nasr Haithem** — ICT Engineering Student at National Engineering School of Sousse (Eniso)
 Academic year: 2025–2026
 
 ---
