@@ -41,7 +41,6 @@ AI-Powered-Ramadan-Food-Optimizer/
 ├── documentation/            # Project docs and guides
 │   ├── FEATURES_README.md    # Full feature breakdown + demo script
 │   ├── ICONS_README.md       # How to create/generate PWA icons
-│   └── Rapport_finale_B9atlek.pdf  # Full academic project report (French)
 │
 ├── .gitignore
 └── README.md                 # ← You are here
