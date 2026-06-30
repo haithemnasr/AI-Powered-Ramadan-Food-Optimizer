@@ -52,14 +52,12 @@ Your website can now be installed like a real app!
 
 ---
 
-## 🎯 Why These Features Impress Judges:
-
 ### Innovation Points:
-1. **Voice Input** - Shows you understand modern UX
-2. **Statistics** - Demonstrates measurable impact
-3. **PWA** - Professional level web development
-4. **Ramadan Calendar** - Cultural relevance
-5. **AI Integration** - Cutting-edge technology
+1. **Voice Input** 
+2. **Statistics**
+3. **PWA**
+4. **Ramadan Calendar**
+5. **AI Integration**
 
 ### Unique Selling Points:
 - "Not just a website, it's an **installable app**"
@@ -92,7 +90,7 @@ b9itlek/
 
 ---
 
-## 🚀 Demo Script for Jury Presentation
+## 🚀 Demo Script
 
 **1. Introduction (30 sec)**
 "مرحبا، B9itlek هو مساعد ذكي لتقليل هدر الطعام في رمضان"
@@ -145,45 +143,3 @@ b9itlek/
 - ✅ Easy to use (zero learning curve)
 
 ---
-
-## 🎓 For Your Presentation
-
-### Key Phrases to Use:
-1. "Progressive Web App - installable like native apps"
-2. "AI-powered personalized suggestions"
-3. "Real-time environmental impact tracking"
-4. "Voice-enabled for accessibility"
-5. "Offline-first architecture"
-6. "Culturally adapted for Tunisian families"
-
-### Comparison to Others:
-| Feature | Most Apps | B9itlek |
-|---------|-----------|---------|
-| Platform | Native app only | Web + PWA |
-| Input | Text only | Text + Voice |
-| AI | Basic | Gemini AI |
-| Impact | None shown | Real-time stats |
-| Offline | Needs internet | Works offline |
-
----
-
-## 🏆 Success Metrics You Can Present
-
-After 1 week of testing with family:
-- "X users tested the app"
-- "Y kg of food saved"
-- "Z recipes suggested"
-- "Reduced food waste by ___%"
-
----
-
-## 🔥 Final Tips
-
-1. **Practice the demo** - make it smooth!
-2. **Show the voice input** - it's impressive
-3. **Highlight statistics** - visual impact
-4. **Mention PWA** - shows technical skill
-5. **Explain AI integration** - modern tech
-6. **Show Tunisian culture** - local relevance
-
-Good luck! Your project is now **competition-ready**! 🌟
